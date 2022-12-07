@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Merriweather&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  position: relative;
+  background-image: url('crossbow.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: #111;*/
+  ;
+}
+
+.m{
+  font-size: 1.9rem;
+  font-weight: bolder;
+}
+
+p {
+  /* font-family: "Lora", serif; */
+  font-family: "Merriweather", serif;
+  /* font-weight: bold; */
+}
+
+h1 {
+  color: palevioletred;
+  /* text-shadow: 3px 2px 2px  black; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 3em;
+  z-index: 10;
+}
+
+h1 span {
+  opacity: 0;
+  display: inline-block;
+  filter: blur(1px);
+  animation: smoke 1.5s linear forwards 13s;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
+    filter: blur(0);
+  }
+}
+
+.by {
+  font-size: 0.5em;
+  color: gold;
+}
+
+.carousel1, .carousel2, .carousel3, .carousel4,
+.carousel5, .carousel6, .carousel7, .carousel8,
+.carousel9, .carousel10, .carousel11, .carousel12,
+.carousel13, .carousel14, .carousel15, .carousel16,
+.carousel17, .carousel18, .carousel19, .carousel20,
+.carousel21, .carousel22, .carousel23, .carousel24,
+.carousel25, .carousel26, .carousel27, .carousel28,
+.carousel29, .carousel30, .carousel31  {
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
+  /* top: 50%;
+  left:50%;
+
+  transform: translate(-50%, -50%); */
+}
+
+span {
+  cursor: pointer;
+}
+
+.pages span::after {
+  /* text-decoration: underline; */
+  /* text-decoration-color: grey; */
+  /* text-shadow: 0 0 1px #050b45; */
+  content: '';
+  position: absolute;
+  /* width: .4em;
+  height: .4em; */
+  /* background-color:white; */
+  justify-content: center;
+  border: 3px solid transparent;
+  border-color: white transparent transparent;
+  opacity: .3;
+  /* left: -1.25em; */
+  /* position: relative; */
+}
+
+span:hover {
+  color: white;
+}
+
+span::before {
+  content: attr(data-content);
+  position: absolute;
+  /*color: white;*/
+  font-size: 1.3em;
+  display: inline-block;
+  border: 2px solid white;
+  background-color: #050b45;
+  top: -1px;
+  border-radius: 10px 10px;
+  opacity: 0;
+  filter: Alpha(opacity=0);
+  /*window8*/
+  white-space: nowrap;
+  transition-property: opacity color;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
+  transition-delay: .2s;
+  -webkit-transition: opacity color 1s ease-out;
+  -moz-transition: opacity color 1s ease-out;
+  -o-transition: opacity color 1s ease-out;
+}
+
+span:hover::before {
+  opacity: 1;
+  filter: Alpha(opacity=100);
+  /*color:white;*/
+  transform: translateX(-25%);
+  padding: 0px 4px;
+}
+.deer1, .deer2, .deer3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+}
+
+.deer3{
+
+  animation : deer 2s ease-in-out forwards 0.5s;
+}
+.deer2{
+
+  animation : deer 2s ease-in-out forwards 3s;
+}
+
+.deer1{
+  height: 130%;
+  animation : deer 2s ease-in forwards 6s;
+}
+
+
+
+@keyframes deer {
+    0%{
+        opacity: 1;
+    }
+
+    25%{
+      opacity: 1;
+    }
+
+    75%{
+      opacity: 0
+    }
+
+
+    100% {
+
+        opacity:0;
+    }
+}
+
+
+
+
+
+
+
+
+
+.end {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1em;
+
+}
+
+.book-cover {
+  height: calc(500px + 12vh);
+  width: calc(400px + 10vw);
+  /* background-color: brown; */
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  border-radius: 15px;
+  border: 5px inset white;
+  background-color: antiquewhite;
+  /* background-image: url("bookbackground.jpg"); */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.carousel-control-next-icon {
+  width: 5vw;
+  height: 5vw;
+  background-color: #050b45;
+  border-radius: 0% 45% 45% 0%;
+  /* position: absolute;
+  right: 100px; */
+}
+
+.carousel-control-prev-icon {
+  width: 5vw;
+  height: 5vw;
+  background-color: #050b45;
+  border-radius: 45% 0% 0% 45%;
+  /* position: absolute;
+  left: 100px; */
+}
+
+.nav-btn {
+  visibility: hidden;
+}
+
+.pages {
+  font-size: 1.8em;
+
+  /* font-weight:500; */
+  /* font-family: "Lora", serif; */
+  /* background-color: lightgrey; */
+  /* background-color: #EEF4EA; */
+  background-image: url('deerbk3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2em 1em;
+  line-height: 2;
+  /* word-spacing: 0.5em; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px outset white;
+  border-radius: 15px;
+  max-width: 550px;
+  max-height: 790px;
+  opacity: 1;
+  text-align: justify;
+  /* justify-content: space-between; */
+}
+
+.page-number {
+  color: black;
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  font-size: 0.7em;
+}
+
+.main-container {
+  background-color: transparent;
+  height: 100vh;
+}
+
+.Oo {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  /* font-style: oblique; */
+  font-family: serif;
+}
+
+#btn-read {
+  position: absolute;
+  border-radius: 10px;
+  border-color: #FFF;
+  right: 10px;
+  top: 10px;
+  color: green;
+  background-color: transparent;
+}
+
+.last-page {
+  text-align: center;
+  background-color: white;
+}
+
+.last-page-img {
+  width: 15em;
+  border-radius: 15%;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: green;
+  height: 100%;
+}
+
+.vid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+
+  width: 130%;
+  /* background-size: cover; */
+}
+
+.vid2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  height: 100%;
+}
+
+.vid3 {
+  height: 100%;
+  transform: translateX(-30%);
+}
+
+
+@media (max-width: 988px) {
+  .pages {
+    font-size: 1.3em;
+    padding: 3em 1em;
+    min-width: 370px;
+    word-spacing: 0.2em;
+  }
+
+  .last-page-img {
+    width: 10em;
+  }
+
+  .book-cover {
+    height: calc(475px + 12vh);
+    width: calc(385px + 8vw);
+  }
+}
+
+/* create the paw prints */
+
+
+.stone{
+  display: inline-block;
+  position: absolute;
+  top:400px;
+  left:20px;
+}
+
+.stone1{
+  display: inline-block;
+  position: absolute;
+  top:100px;
+  left:400px;
+}
+
+.stoneImg{
+  width: 120px;
+  background: none;
+}
+
+
+.g{
+  position: absolute;
+  display: inline-block;
+  height: 100px;
+  /* width: 20px; */
+  background: none;
+  z-index: -1;
+}
+
+.grass1{
+  top:10px;
+  left:20px;
+}
+.grass2{
+  top:10px;
+  left:200px;
+}
+.grass3{
+  top:200px;
+  left:60px;
+}
+.grass4{
+  top:300px;
+  left:180px;
+}
+.grass5{
+  top:280px;
+  left:280px;
+}
+
+.g1{
+  height: 60px;
+}
+.pad {
+    width: 1.7em;
+    height: 1.7em;
+    background-color: #654321;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px     108px 72px 72px;
+    border-radius: 50%  50%  50%  50%  / 60%   60%         40%  40%;
+    display: block;
+    position: absolute;
+
+
+}
+.large {
+   width: 4.4em;
+   height: 5em;
+   transform: rotate(80deg);
+   left: 100px;
+   top: 50px;
+
+
+}
+.small-1 {
+   transform: rotate(50deg);
+   left: 145px;
+   top: 28px;
+}
+.small-2 {
+   transform: rotate(65deg);
+   left: 174px;
+   top: 50px;
+}
+.small-3 {
+   transform: rotate(98deg);
+   position: absolute;
+   left: 178px;
+   top: 87px;
+}
+.small-4 {
+   transform: rotate(140deg);
+   position: absolute;
+   left: 158px;
+   top: 117px;
+}
+
+/* position and animate */
+
+.paw-print-1 {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  top: 300px;
+  scale: 0.5;
+  transform: rotate(-40deg);
+  -webkit-animation: walk 1s linear infinite;
+  animation: /*keyframe*/walk /*duration*/1s /*transition*/linear /*repeat*/forwards;
+}
+.paw-print-2 {
+  opacity: 0;
+  position: absolute;
+  left: 95px;
+  top: 280px;
+  scale: 0.5;
+  transform: rotate(-5deg);
+  -webkit-animation: walk 1s linear forwards 0.25s;
+  animation: walk 1s linear forwards /*delay*/0.25s;
+}
+.paw-print-3 {
+  opacity: 0;
+  position: absolute;
+  left: 130px;
+  top: 130px;
+  scale: 0.5;
+  transform: rotate(-10deg);
+  -webkit-animation: walk 1s linear forwards 0.5s;
+  animation: walk 1s linear forwards 0.5s;
+}
+.paw-print-4 {
+  opacity: 0;
+  position: absolute;
+  left: 200px;
+  top: 280px;
+  scale: 0.5;
+  transform: rotate(-20deg);
+  -webkit-animation: walk 1s linear forwards 0.75s;
+  animation: walk 1s linear forwards 0.75s;
+}
+.paw-print-5 {
+  opacity: 0;
+  position: absolute;
+  left: 260px;
+  top: 50px;
+  scale: 0.5;
+  transform: rotate(10deg);
+  -webkit-animation: walk 1s linear forwards 1s;
+  animation: walk 1s linear forwards 1s;
+}
+.paw-print-6 {
+  opacity: 0;
+  position: absolute;
+  left: 299px;
+  top: 200px;
+  scale: 0.5;
+  transform: rotate(10deg);
+  -webkit-animation: walk 1s linear forwards 1.25s;
+  animation: walk 1s linear forwards 1.25s;
+}
+.paw-print-7 {
+  opacity: 0;
+  position: absolute;
+  left: 350px;
+  top: 50px;
+  scale: 0.5;
+  transform: rotate(20deg);
+  -webkit-animation: walk 1s linear forwards 1.5s;
+  animation: walk 1s linear forwards 1.5s;
+}
+.paw-print-8 {
+  opacity: 0;
+  position: absolute;
+  left: 340px;
+  top: 250px;
+  scale: 0.5;
+  transform: rotate(10deg);
+  -webkit-animation: walk 1s linear forwards 1.75s;
+  animation: walk 1s linear forwards 1.75s;
+}
+
+/* walking effect animation keyframes */
+
+
+
+
+
+@keyframes walk {
+  /* appear */
+  25%  {opacity: 1;}
+  /* disappear */
+  100% {opacity: 0;}
+}
+
+
+@-webkit-keyframes walk {
+  25%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.h{
+    height: 10em;
+    width: 10em;
+
+    background: black;
+    position: relative;
+    top: 0.5em;
+    /*top:1em;*/
+
+    border-radius: 40% 40% 10% 10%;
+
+
+}
+.t{
+    height: 16em;
+    width: 10em;
+    background: burlywood;
+    position: relative;
+    top:  1.2em;
+
+    border-radius: 20% 20% 50% 50%;
+}
+
+.print{
+    transform: rotate(-90deg);
+    scale: 15%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/2.25s ;
+}
+
+.print1{
+    transform: rotate(-90deg);
+    scale: 15%;
+    position: absolute;
+    left: 90px;
+    top: 70px;
+    /* background-color: blue; */
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/2.65s;
+}
+.print2{
+    transform: rotate(-109deg);
+    scale: 15%;
+    position: absolute;
+    left: 150px;
+    top: 11px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/3.0s;
+}
+.print3{
+    transform: rotate(-109deg);
+    scale: 15%;
+    position: absolute;
+    left: 240px;
+    top: 15px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/3.25s;
+}
+.print4{
+    transform: rotate(-108deg);
+    scale: 15%;
+    position: absolute;
+    left: 320px;
+    top: -80px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/3.75s;
+}
+.print5{
+    transform: rotate(-8deg);
+    scale: 15%;
+    position: absolute;
+    left: 380px;
+    top: 19px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/4.25s;
+}
+.print6{
+    transform: rotate(-8deg);
+    scale: 15%;
+    position: relative;
+    left: 395px;
+    top: 90px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 3s linear forwards /*delay*/4.5s;
+}
+@keyframes walk1 {
+  /* appear */
+  25%  {opacity: 1;}
+  /* disappear */
+  100% {opacity: 0;}
+}
+/* ------------------------------------------------------------------------------------ */
+
+.paw-print1-1 {
+  opacity: 0;
+  position: absolute;
+  left: 240px;
+  top: 3px;
+  scale: 0.5;
+  transform: rotate(90deg);
+  -webkit-animation: walk2 1s linear forwards 5.9s;
+  animation: /*keyframe*/walk2 /*duration*/1s /*transition*/linear /*repeat*/forwards 5.9s;
+}
+.paw-print1-2 {
+  opacity: 0;
+  position: absolute;
+  left: 170px;
+  top: 80px;
+  scale: 0.5;
+  transform: rotate(95deg);
+  -webkit-animation: walk2 1s linear forwards 6.2s;
+  animation: walk2 1s linear forwards /*delay*/6.2s;
+}
+.paw-print1-3 {
+  opacity: 0;
+  position: absolute;
+  left: 250px;
+  top: 140px;
+  scale: 0.5;
+  transform: rotate(55deg);
+  -webkit-animation: walk2 1s linear forwards 6.4s;
+  animation: walk2 1s linear forwards 6.4s;
+}
+
+.paw-print1-4 {
+  opacity: 0;
+  position: absolute;
+  left: 200px;
+  top: 240px;
+  scale: 0.5;
+  transform: rotate(75deg);
+  -webkit-animation: walk2 1s linear forwards 6.6s;
+  animation: walk2 1s linear forwards 6.6s;
+}
+.paw-print1-5 {
+  opacity: 0;
+  position: absolute;
+  left: 250px;
+  top: 320px;
+  scale: 0.5;
+  transform: rotate(65deg);
+  -webkit-animation: walk2 1s linear forwards 6.9s;
+  animation: walk2 1s linear forwards 6.9s;
+}
+.paw-print1-6 {
+  opacity: 0;
+  position: absolute;
+  left: 220px;
+  top: 400px;
+  scale: 0.5;
+  transform: rotate(65deg);
+  -webkit-animation: walk2 1s linear forwards 7.2s;
+  animation: walk2 1s linear forwards 7.2s;
+}
+
+@keyframes walk2 {
+  /* appear */
+  25%  {opacity: 1;}
+  /* disappear */
+  100% {opacity: 0;}
+}
+
+
+@-webkit-keyframes walk2 {
+  25%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+/* ------------------------------------------------------------ */
+
+.printt{
+    transform: rotate();
+    scale: 15%;
+    position: absolute;
+    left: 210px;
+    top: -190px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/8.25s ;
+}
+
+.printt1{
+    transform: rotate(10deg);
+    scale: 15%;
+    position: absolute;
+    left: 190px;
+    top: -100px;
+    /* background-color: blue; */
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/8.65s;
+}
+.printt2{
+    transform: rotate(10deg);
+    scale: 15%;
+    position: absolute;
+    left: 250px;
+    top: -10px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/9.0s;
+}
+.printt3{
+    transform: rotate();
+    scale: 15%;
+    position: absolute;
+    left: 210px;
+    top: 105px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/9.25s;
+}
+.printt4{
+    transform: rotate(10deg);
+    scale: 15%;
+    position: absolute;
+    left: 230px;
+    top: 180px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/9.75s;
+}
+.printt5{
+    transform: rotate(8deg);
+    scale: 15%;
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/9.9s;
+}
+.printt6{
+    transform: rotate();
+    scale: 15%;
+    position: absolute;
+    left: 150px;
+    top: 330px;
+    /*background-color: white;*/
+    display:inline-block;
+    opacity:0;
+    animation: walk1 1s linear forwards /*delay*/9.9s;
+}
+/* ---------------------------------------------------------- */
+
+.paw-print2-1 {
+  opacity: 0;
+  position: absolute;
+  left: 500px;
+  top: 200px;
+  scale: 0.5;
+  transform: rotate(180deg);
+  -webkit-animation: walk2 1s linear forwards 10.5s;
+  animation: /*keyframe*/walk2 /*duration*/1s /*transition*/linear /*repeat*/forwards 10.5s;
+}
+.paw-print2-2 {
+  opacity: 0;
+  position: absolute;
+  left: 430px;
+  top: 230px;
+  scale: 0.5;
+  transform: rotate(195deg);
+  -webkit-animation: walk2 1s linear forwards 10.9s;
+  animation: walk2 1s linear forwards /*delay*/10.9s;
+}
+.paw-print2-3 {
+  opacity: 0;
+  position: absolute;
+  left: 330px;
+  top: 200px;
+  scale: 0.5;
+  transform: rotate(185deg);
+  -webkit-animation: walk2 1s linear forwards 11.4s;
+  animation: walk2 1s linear forwards 11.4s;
+}
+.paw-print2-4 {
+  opacity: 0;
+  position: absolute;
+  left: 230px;
+  top: 230px;
+  scale: 0.5;
+  transform: rotate(195deg);
+  -webkit-animation: walk2 4.4s linear forwards 11.9s;
+  animation: walk2 4.4s linear forwards /*delay*/11.9s;
+}
+.paw-print2-5 {
+  opacity: 0;
+  position: absolute;
+  left: 130px;
+  top: 200px;
+  scale: 0.5;
+  transform: rotate(185deg);
+  -webkit-animation: walk2 4s linear forwards 12.4s;
+  animation: walk2 4s linear forwards 12.4s;
+}
+
+/* ---------------------------------------------- */
+
+.aa{
+    font-size: 100px;
+    /* color: antiquewhite; */
+    display:inline-block;
+    background-color: none;
+    margin:0;
+    padding:0;
+    transform: rotate(-17deg);
+}
+
+.arrow{
+    position:absolute;
+    background-color:none;
+    display:inline-block;
+    margin: 0;
+    padding:0;
+    left:600px;
+    top:-10px;
+    opacity: 0;
+    animation: right-2-left 1.6s ease-in forwards 13s;
+}
+
+@keyframes right-2-left {
+    0%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-600%);
+        opacity:0;
+    }
+}
